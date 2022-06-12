@@ -24,9 +24,11 @@
 #include "lvgl_integr.h"
 #include "log.h"
 #include "eos_init.h"
-#include "lua_eos.h"
+#include "nat_cmd.h"
+//#include "lua_eos.h"
 #include "eos_config.h"
 
+extern "C" void eos_init(void);
 
 #define LUA_EOS_VERSION "0.0"
 
@@ -72,9 +74,9 @@ MainWindow::MainWindow(QWidget *parent)
     connect(&luaInit, &LuaInit::luaToConsole, this, &MainWindow::forwardToConsole);
 
     //nat_cmd_init();
-    eos_init();
+    //eos_init();
 
-    //luaInit.start();
+    luaInit.start();
 
 }
 
@@ -130,6 +132,7 @@ void MainWindow::writeDataFromTerm(const QByteArray &data)
     memcpy(&msg[msg_len], data.data(), to_transfer);
     msg_len += to_transfer;
 
+#if 0
     // scan for native console switch pattern (3 scape characters):
     int esc_n = 0;
     char * ptr = msg;
@@ -147,7 +150,7 @@ void MainWindow::writeDataFromTerm(const QByteArray &data)
         }
         ptr++;
     }
-
+#endif
 
     // if last char is either CR or LF we send to console controller
     if (msg[msg_len - 1] != '\r') {
@@ -155,7 +158,11 @@ void MainWindow::writeDataFromTerm(const QByteArray &data)
     }
 
     // dispatch line to C program
+#if 0
     sendTextToConsoleController(msg);
+#else
+    nat_cmd_exec( msg);
+#endif
     msg_len = 0;
     memset(msg, 0, sizeof(msg));
 }

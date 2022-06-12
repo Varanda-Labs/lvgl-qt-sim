@@ -76,7 +76,7 @@ typedef struct ev_queue_item_st {
     ev_queue_item_union_t       item;
 } ev_queue_item_t;
 
-// typedef void (*cb_event_push_t)(lua_State *L, ev_queue_item_t * queue_item_ptr);
+//typedef void (*cb_event_push_t)(lua_State *L, ev_queue_item_t * queue_item_ptr);
 void add_event_to_queue( const void * ev_item);
 
 bool add_text_event(sys_events_t id, char * txt);

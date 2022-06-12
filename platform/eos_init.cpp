@@ -47,8 +47,8 @@ void LuaInit::sendToConsole(char * msg)
         LOG_W("sendToConsole: len = 0");
         return;
     }
-    len; // add room for the zero terminator
-    char * buf = (char *) malloc(len + 2);
+    //len; // add room for the zero terminator
+    char * buf = (char *) calloc(len + 2, 1);
     if (buf == NULL) {
         LOG_E("sendToConsole: no memo");
         return;
@@ -67,9 +67,9 @@ void LuaInit::sendToConsole(char * msg)
 
 
 extern "C" {
-#include "lua.h"
-#include "lauxlib.h"
-#include "lualib.h"
+//#include "lua.h"
+//#include "lauxlib.h"
+//#include "lualib.h"
 #include "log.h"
 #include "mos.h"
 #include "lua_eos.h"
@@ -82,6 +82,22 @@ void toConsole(char * msg)
     luaInitObjtPtr->sendToConsole(msg);
 }
 
+#include "../lvgl.h"
+#include "lv_btn.h"
+#include "lv_label.h"
+
+void lvglAppMain (void * arg)
+{
+    lv_obj_t * label;
+
+    lv_obj_t * btn1 = lv_btn_create(lv_scr_act());
+    //lv_obj_set_event_cb(btn1, event_handler);
+    lv_obj_align(btn1, LV_ALIGN_CENTER, 0, -40);
+    label = lv_label_create(btn1);
+    lv_label_set_text(label, "Button");
+
+}
+
 };
 
 static void luaCppThread(void)
@@ -91,7 +107,7 @@ static void luaCppThread(void)
 
 #ifdef MOS_DESKTOP
     mos_timer_init();
-    mos_thread_h_t task = mos_thread_new( "luaTask", luaTask, NULL, LUA_EOS_STACK_SIZE, LUA_TASK_PRIORITY );
+    mos_thread_h_t task = mos_thread_new( "lvglAppMain", lvglAppMain, NULL, LUA_EOS_STACK_SIZE, LUA_TASK_PRIORITY );
 
 #else
     rtos_entry();
