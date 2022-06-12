@@ -31,12 +31,7 @@ static void updateDisplay (const lv_area_t * area, lv_color_t * color_p, bool la
 extern "C" {
 #endif
 
-//extern void lv_ex_get_started_1(void);
 #define DISP_BUF_SIZE (LV_HOR_RES_MAX * 10)
-//static lv_indev_drv_t indev_drv;
-//static lv_disp_drv_t disp_drv;               /*Descriptor of a display driver*/
-//static lv_disp_draw_buf_t disp_buf;
-//static lv_color_t buf_1[DISP_BUF_SIZE];
 
 static lv_indev_drv_t indev_drv;
 static int touchpad_x = 0, touchpad_y = 0;
@@ -45,14 +40,7 @@ static lv_indev_state_t touchpad_old_state = LV_INDEV_STATE_REL;
 
 //----------- prototypes ----------
 static void disp_flush(lv_disp_drv_t * disp, const lv_area_t * area, lv_color_t * color_p);
-//static void touchpad_init(void);
 static bool touchpad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data);
-//static bool touchpad_is_pressed(void);
-//static void touchpad_get_xy(lv_coord_t * x, lv_coord_t * y);
-
-//static void lv_integr_input_read(struct _lv_indev_drv_t * indev_drv, lv_indev_data_t * data);
-
-//static void * lv_integr_input_read(struct _lv_disp_drv_t * drv, lv_indev_data_t*data)
 static bool touchpad_read(lv_indev_drv_t * indev_drv, lv_indev_data_t * data)
 {
   Q_UNUSED(indev_drv);
@@ -137,23 +125,6 @@ static void disp_flush(lv_disp_drv_t * disp, const lv_area_t * area, lv_color_t 
   updateDisplay(area, color_p, last);
   lv_disp_flush_ready(disp);         /* Indicate you are ready with the flushing*/
 }
-
-//static void lv_integr_input_read(struct _lv_disp_drv_t * drv, lv_indev_data_t*data)
-//{
-//  Q_UNUSED(drv);
-//  //  bool ret = false;
-//  data->point.x = touchpad_x;
-//  data->point.y = touchpad_y;
-//  data->state = touchpad_state; //LV_INDEV_STATE_REL; //LV_INDEV_STATE_PR or LV_INDEV_STATE_REL;
-//  if ( touchpad_state != touchpad_old_state) {
-//      touchpad_old_state = touchpad_state;
-//      LOG("mouse down: x=%d y=%d", touchpad_x, touchpad_y);
-//  }
-//  //return ret; /*No buffering now so no more data read*/
-//}
-
-
-
 
 #ifdef __cplusplus
 };

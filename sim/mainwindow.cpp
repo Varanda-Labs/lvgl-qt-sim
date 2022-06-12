@@ -17,6 +17,7 @@
 
 #include <QDebug>
 #include <QThread>
+#include <QStyle>
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "lv_conf.h"
@@ -41,12 +42,16 @@ MainWindow::MainWindow(QWidget *parent)
 
 {
     ui->setupUi(this);
+    ui->lb_display->setMaximumWidth(LV_HOR_RES_MAX);
+    ui->lb_display->setMaximumHeight(LV_VER_RES_MAX);
+    setWindowTitle("LVGL Qt Simulator - version " LUA_EOS_VERSION);
+
+    setGeometry(0,0, LV_HOR_RES_MAX, LV_VER_RES_MAX);
+
 
     gMainObj = this;
 
     installEventFilter(this);
-
-    setWindowTitle("LUA EOS Simulator - version " LUA_EOS_VERSION);
 
     connect(ui->lb_display, SIGNAL(mousePressed(int, int)), this, SLOT(onMousePressed(int, int)));
     connect(ui->lb_display, SIGNAL(mouseReleased(int, int)), this, SLOT(onMouseReleased(int, int)));
