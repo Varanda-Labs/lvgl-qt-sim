@@ -89,7 +89,7 @@ void toConsole(char * msg)
 
 void lvglAppMain (void * arg)
 {
-#if defined LV_USE_DEMO_MUSIC
+#if defined USE_DEMO_MUSIC
     lv_demo_music();
 #else
     lvgl_app_main();
