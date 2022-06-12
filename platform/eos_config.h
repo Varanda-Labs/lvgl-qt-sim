@@ -61,8 +61,8 @@
 #endif
 
 // Stack sizes
-#define LUA_EOS_STACK_SIZE (8 * 1024) // 8k
-#define LVGL_TASK_STACK_SIZE (8 * 1024) // 8K
+#define LUA_EOS_STACK_SIZE (1024 * 1024) // 1M
+#define LVGL_TASK_STACK_SIZE (1024 * 1024) // 1M
 #define CONSOLE_INPUT_STACK_SIZE (1024) // 0.5 K 
 
 // lua heap size

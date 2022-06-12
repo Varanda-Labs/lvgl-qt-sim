@@ -78,6 +78,7 @@ extern "C" {
 extern void rtos_entry(void);
 
 extern "C" void lvgl_app_main(void);
+extern "C" void lv_demo_music(void);
 
 void toConsole(char * msg)
 {
@@ -88,7 +89,11 @@ void toConsole(char * msg)
 
 void lvglAppMain (void * arg)
 {
+#if defined LV_USE_DEMO_MUSIC
+    lv_demo_music();
+#else
     lvgl_app_main();
+#endif
 }
 
 static void luaCppThread(void)

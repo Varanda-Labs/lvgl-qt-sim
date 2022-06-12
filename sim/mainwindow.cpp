@@ -61,7 +61,8 @@ MainWindow::MainWindow(QWidget *parent)
     //display_image.fill(Qt::green);
     //ui->lb_display->setPixmap(QPixmap::fromImage(display_image));
     //ui->lb_display->update();
-#if 1
+
+#if 0 // disable terminal for now
     m_term = new TermDlg(this);
     m_term_console = m_term->m_console;
     connect(m_term_console, &Console::getData, this, &MainWindow::writeDataFromTerm);
