@@ -197,7 +197,7 @@
  *-----------*/
 
 /*Enable the log module*/
-#define LV_USE_LOG 0
+// LV_USE_LOG is defined in Qt project file (.pro).
 #if LV_USE_LOG
 
     /*How important log should be added:

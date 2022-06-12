@@ -77,28 +77,19 @@ extern "C" {
 
 extern void rtos_entry(void);
 
+extern "C" void lvgl_app_main(void);
+
 void toConsole(char * msg)
 {
     luaInitObjtPtr->sendToConsole(msg);
 }
 
-#include "../lvgl.h"
-#include "lv_btn.h"
-#include "lv_label.h"
+};
 
 void lvglAppMain (void * arg)
 {
-    lv_obj_t * label;
-
-    lv_obj_t * btn1 = lv_btn_create(lv_scr_act());
-    //lv_obj_set_event_cb(btn1, event_handler);
-    lv_obj_align(btn1, LV_ALIGN_CENTER, 0, -40);
-    label = lv_label_create(btn1);
-    lv_label_set_text(label, "Button");
-
+    lvgl_app_main();
 }
-
-};
 
 static void luaCppThread(void)
 {

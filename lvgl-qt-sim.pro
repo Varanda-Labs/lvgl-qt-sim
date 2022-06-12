@@ -25,8 +25,9 @@ DEFINES += MOS_DESKTOP
 
 DEFINES += projCOVERAGE_TEST=1
 
-DEFINES += LV_USE_LOG=0
+DEFINES += LV_USE_LOG=LV_LOG_LEVEL_WARN
 #DEFINES += LV_LOG_LEVEL=LV_LOG_LEVEL_WARN
+
 
 # lua heap
 DEFINES += USE_DL_PREFIX MSPACES=1 USE_DOUG_LEA_MALLOC ONLY_MSPACES=0 NO_MALLINFO=0
@@ -35,6 +36,7 @@ mac: DEFINES += MACOS
 linux: DEFINES += LINUX
 
 INCLUDEPATH += \
+  ./app \
   ./sim \
   ./platform \
   ./lvgl \
@@ -62,6 +64,7 @@ SOURCES += \
     ./sim/main.cpp \
     ./sim/mainwindow.cpp \
     ./sim/termdlg.cpp \
+    app/app.c \
     lvgl/src/core/lv_disp.c \
     lvgl/src/core/lv_event.c \
     lvgl/src/core/lv_group.c \
