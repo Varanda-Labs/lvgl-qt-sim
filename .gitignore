@@ -1,2 +1,4 @@
 .DS_Store
-
+lvgl-qt-sim.app
+lvgl-qt-sim.pro.user
+.qmake.*

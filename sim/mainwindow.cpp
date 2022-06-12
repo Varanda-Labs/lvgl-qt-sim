@@ -74,7 +74,7 @@ MainWindow::MainWindow(QWidget *parent)
     //nat_cmd_init();
     eos_init();
 
-    luaInit.start();
+    //luaInit.start();
 
 }
 
