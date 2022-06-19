@@ -2,7 +2,7 @@
 #define TERMDLG_H
 /***************************************************************
  *
- *                 This code is part of LUA_EOS
+ *                 This code is part of LVGL-Qt-Simulator
  *
  * Copyrights 2021 - Varanda Labs Inc.
  *

@@ -2,7 +2,7 @@
 #define __MOS_DESK_TIMER_H__
 /***************************************************************
  *
- *                 This code is part of LUA_EOS
+ *                 This code is part of LVGL-Qt-Simulator
  *
  * Copyrights 2021 - Varanda Labs Inc.
  *
