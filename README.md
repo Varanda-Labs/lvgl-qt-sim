@@ -1,0 +1,27 @@
+# lvgl-qt-sim
+A simple LVGL Simulator. Qt Creator IDE makes easier to develop LVGL UI Apps.
+<br>
+<br>
+![docs/demo.png](docs/demo.png)
+
+# Installation
+- install Qt (tested with 5.12.2)
+- use a git shell:
+
+```
+git clone https://github.com/Varanda-Labs/lvgl-qt-sim.git
+cd lvgl-qt-sim
+git submodule update --init
+```
+
+- Launch Qt Creator
+- Open one of the "*.pro" projects.
+- Have fun
+
+## Video
+![https://rumble.com/v19160b-lvgl-qt-simulator.html](https://rumble.com/v19160b-lvgl-qt-simulator.html)
+
+< amp-iframe width="640" height="360" sandbox="allow-scripts allow-same-origin" layout="responsive" frameborder="0" src="https://rumble.com/v19160b-lvgl-qt-simulator.html" >
+
+
+
