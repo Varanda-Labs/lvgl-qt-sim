@@ -19,9 +19,10 @@ git submodule update --init
 - Have fun
 
 ## Video
-[https://rumble.com/v19160b-lvgl-qt-simulator.html](docs/video.png)
 
-[![Watch the video](docs/video.png)]([https://youtu.be/vt5fpE0bzSY](https://rumble.com/v19160b-lvgl-qt-simulator.html))
+<a href="https://rumble.com/v19160b-lvgl-qt-simulator.html">
+  <img src="docs/video.png">
+</a>
 
 
 
