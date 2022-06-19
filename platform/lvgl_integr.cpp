@@ -138,7 +138,7 @@ static void updateDisplay (const lv_area_t * area, lv_color_t * color_p, bool la
     lv_color_t pixel;
 
     QRgb pixel_output;
-
+#if 1
     for(y = area->y1; y <= area->y2; y++) {
         for(x = area->x1; x <= area->x2; x++) {
             pixel = *color_p;
@@ -153,8 +153,7 @@ static void updateDisplay (const lv_area_t * area, lv_color_t * color_p, bool la
     if (last) {
         gMainObj->ui->lb_display->setPixmap(QPixmap::fromImage(gMainObj->display_image));
     }
-
-
+#endif
 
 }
 

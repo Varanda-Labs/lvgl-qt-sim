@@ -1,6 +1,16 @@
 
 #include "../lvgl/lvgl.h"
 
+#ifdef USE_SIM_LOG  // for dimulator this is defined in .pro file
+#include "log.h"
+#undef LV_LOG_USER
+#define LV_LOG_USER LOG
+#undef LV_LOG_ERROR
+#define LV_LOG_ERROR LOG_E
+#undef LV_LOG_WARN
+#define LV_LOG_WARN LOG_W
+#endif
+
 static void event_handler(lv_event_t * e)
 {
     lv_event_code_t code = lv_event_get_code(e);

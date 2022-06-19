@@ -301,6 +301,9 @@ HEADERS += \
     ./sim/mainwindow.h \
     ./sim/termdlg.h \
     lv_conf.h \
+    lvgl/demos/music/lv_demo_music.h \
+    lvgl/demos/music/lv_demo_music_list.h \
+    lvgl/demos/music/lv_demo_music_main.h \
     lvgl/lv_conf_template.h \
     lvgl/src/core/lv_disp.h \
     lvgl/src/core/lv_event.h \
