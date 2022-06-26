@@ -1,3 +1,6 @@
 [submodule "lvgl"]
 	path = lvgl
 	url = https://github.com/Varanda-Labs/lvgl.git
+[submodule "app/GuitarPedals"]
+	path = app/GuitarPedals
+	url = https://github.com/Varanda-Labs/GuitarPedals.git
