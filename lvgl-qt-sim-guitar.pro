@@ -67,6 +67,22 @@ SOURCES += \
     ./sim/mainwindow.cpp \
     ./sim/termdlg.cpp \
     app/GuitarPedals/guitar_pedals_main.c \
+    app/GuitarPedals/src/ui.c \
+    app/GuitarPedals/src/ui_helpers.c \
+    app/GuitarPedals/src/ui_img_arrows_down_png.c \
+    app/GuitarPedals/src/ui_img_arrows_up_png.c \
+    app/GuitarPedals/src/ui_img_board_label_png.c \
+    app/GuitarPedals/src/ui_img_boards_icon_png.c \
+    app/GuitarPedals/src/ui_img_guitar_background_01_png.c \
+    app/GuitarPedals/src/ui_img_left_arrow_png.c \
+    app/GuitarPedals/src/ui_img_padels_label_png.c \
+    app/GuitarPedals/src/ui_img_pedal_compr_png.c \
+    app/GuitarPedals/src/ui_img_pedal_dist_png.c \
+    app/GuitarPedals/src/ui_img_pedal_echo_png.c \
+    app/GuitarPedals/src/ui_img_pedal_fuzz_png.c \
+    app/GuitarPedals/src/ui_img_pedal_volume_png.c \
+    app/GuitarPedals/src/ui_img_right_arrow_png.c \
+    app/GuitarPedals/src/ui_img_screen_icon_png.c \
     app/app.c \
     lvgl/src/core/lv_disp.c \
     lvgl/src/core/lv_event.c \
@@ -231,6 +247,8 @@ HEADERS += \
     ./sim/log.h \
     ./sim/mainwindow.h \
     ./sim/termdlg.h \
+    app/GuitarPedals/src/ui.h \
+    app/GuitarPedals/src/ui_helpers.h \
     lv_conf.h \
     lvgl/lv_conf_template.h \
     lvgl/src/core/lv_disp.h \
