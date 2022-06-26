@@ -22,7 +22,7 @@
 #include "log.h"
 
 MainWindow * gMainObj;
-
+lv_indev_t * global_indev;
 
 static void updateDisplay (const lv_area_t * area, lv_color_t * color_p, bool last);
 
@@ -34,6 +34,7 @@ extern "C" {
 #define DISP_BUF_SIZE (LV_HOR_RES_MAX * 10)
 
 static lv_indev_drv_t indev_drv;
+
 static int touchpad_x = 0, touchpad_y = 0;
 static lv_indev_state_t touchpad_state = LV_INDEV_STATE_REL;
 static lv_indev_state_t touchpad_old_state = LV_INDEV_STATE_REL;
@@ -60,7 +61,7 @@ static void init_pointer(void)
     lv_indev_drv_init(&indev_drv);
     indev_drv.type = LV_INDEV_TYPE_POINTER;
     indev_drv.read_cb = (void (*)(struct _lv_indev_drv_t *, lv_indev_data_t * )) touchpad_read;
-    lv_indev_drv_register(&indev_drv);
+    global_indev = lv_indev_drv_register(&indev_drv);
 }
 
 static void init_disp()
