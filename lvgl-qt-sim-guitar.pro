@@ -75,10 +75,21 @@ SOURCES += \
     app/GuitarPedals/src/ui_img_boards_icon_png.c \
     app/GuitarPedals/src/ui_img_guitar_background_01_png.c \
     app/GuitarPedals/src/ui_img_left_arrow_png.c \
+    app/GuitarPedals/src/ui_img_number_0_png.c \
+    app/GuitarPedals/src/ui_img_number_1_png.c \
+    app/GuitarPedals/src/ui_img_number_2_png.c \
+    app/GuitarPedals/src/ui_img_number_3_png.c \
+    app/GuitarPedals/src/ui_img_number_4_png.c \
+    app/GuitarPedals/src/ui_img_number_5_png.c \
+    app/GuitarPedals/src/ui_img_number_6_png.c \
+    app/GuitarPedals/src/ui_img_number_7_png.c \
+    app/GuitarPedals/src/ui_img_number_8_png.c \
+    app/GuitarPedals/src/ui_img_number_9_png.c \
     app/GuitarPedals/src/ui_img_padels_label_png.c \
     app/GuitarPedals/src/ui_img_pedal_compr_png.c \
     app/GuitarPedals/src/ui_img_pedal_dist_png.c \
     app/GuitarPedals/src/ui_img_pedal_echo_png.c \
+    app/GuitarPedals/src/ui_img_pedal_empty_png.c \
     app/GuitarPedals/src/ui_img_pedal_fuzz_png.c \
     app/GuitarPedals/src/ui_img_pedal_volume_png.c \
     app/GuitarPedals/src/ui_img_right_arrow_png.c \
