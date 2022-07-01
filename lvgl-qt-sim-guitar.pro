@@ -258,6 +258,7 @@ HEADERS += \
     ./sim/log.h \
     ./sim/mainwindow.h \
     ./sim/termdlg.h \
+    app/GuitarPedals/src/pedal.h \
     app/GuitarPedals/src/ui.h \
     app/GuitarPedals/src/ui_helpers.h \
     lv_conf.h \
