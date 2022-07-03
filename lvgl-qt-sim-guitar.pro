@@ -114,9 +114,11 @@ SOURCES += \
     lvgl/src/draw/lv_draw_arc.c \
     lvgl/src/draw/lv_draw_img.c \
     lvgl/src/draw/lv_draw_label.c \
+    lvgl/src/draw/lv_draw_layer.c \
     lvgl/src/draw/lv_draw_line.c \
     lvgl/src/draw/lv_draw_mask.c \
     lvgl/src/draw/lv_draw_rect.c \
+    lvgl/src/draw/lv_draw_transform.c \
     lvgl/src/draw/lv_draw_triangle.c \
     lvgl/src/draw/lv_img_buf.c \
     lvgl/src/draw/lv_img_cache.c \
@@ -127,10 +129,12 @@ SOURCES += \
     lvgl/src/draw/sw/lv_draw_sw_dither.c \
     lvgl/src/draw/sw/lv_draw_sw_gradient.c \
     lvgl/src/draw/sw/lv_draw_sw_img.c \
+    lvgl/src/draw/sw/lv_draw_sw_layer.c \
     lvgl/src/draw/sw/lv_draw_sw_letter.c \
     lvgl/src/draw/sw/lv_draw_sw_line.c \
     lvgl/src/draw/sw/lv_draw_sw_polygon.c \
     lvgl/src/draw/sw/lv_draw_sw_rect.c \
+    lvgl/src/draw/sw/lv_draw_sw_transform.c \
     lvgl/src/extra/layouts/flex/lv_flex.c \
     lvgl/src/extra/layouts/grid/lv_grid.c \
     lvgl/src/extra/lv_extra.c \
@@ -282,9 +286,11 @@ HEADERS += \
     lvgl/src/draw/lv_draw_arc.h \
     lvgl/src/draw/lv_draw_img.h \
     lvgl/src/draw/lv_draw_label.h \
+    lvgl/src/draw/lv_draw_layer.h \
     lvgl/src/draw/lv_draw_line.h \
     lvgl/src/draw/lv_draw_mask.h \
     lvgl/src/draw/lv_draw_rect.h \
+    lvgl/src/draw/lv_draw_transform.h \
     lvgl/src/draw/lv_draw_triangle.h \
     lvgl/src/draw/lv_img_buf.h \
     lvgl/src/draw/lv_img_cache.h \
