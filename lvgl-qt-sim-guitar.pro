@@ -73,7 +73,7 @@ SOURCES += \
     app/GuitarPedals/src/ui_img_arrows_up_png.c \
     app/GuitarPedals/src/ui_img_board_label_png.c \
     app/GuitarPedals/src/ui_img_boards_icon_png.c \
-    app/GuitarPedals/src/ui_img_guitar_background_01_png.c \
+    app/GuitarPedals/src/ui_img_disp_background_png.c \
     app/GuitarPedals/src/ui_img_left_arrow_png.c \
     app/GuitarPedals/src/ui_img_number_0_png.c \
     app/GuitarPedals/src/ui_img_number_1_png.c \
