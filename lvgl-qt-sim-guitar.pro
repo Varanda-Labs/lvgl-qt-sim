@@ -67,6 +67,11 @@ SOURCES += \
     ./sim/mainwindow.cpp \
     ./sim/termdlg.cpp \
     app/GuitarPedals/guitar_pedals_main.c \
+    app/GuitarPedals/src/pedal_compressor.c \
+    app/GuitarPedals/src/pedal_distortion.c \
+    app/GuitarPedals/src/pedal_echo.c \
+    app/GuitarPedals/src/pedal_fuzz.c \
+    app/GuitarPedals/src/pedal_volume.c \
     app/GuitarPedals/src/ui.c \
     app/GuitarPedals/src/ui_helpers.c \
     app/GuitarPedals/src/ui_img_arrows_down_png.c \
@@ -263,6 +268,11 @@ HEADERS += \
     ./sim/mainwindow.h \
     ./sim/termdlg.h \
     app/GuitarPedals/src/pedal.h \
+    app/GuitarPedals/src/pedal_compressor.h \
+    app/GuitarPedals/src/pedal_distortion.h \
+    app/GuitarPedals/src/pedal_echo.h \
+    app/GuitarPedals/src/pedal_fuzz.h \
+    app/GuitarPedals/src/pedal_volume.h \
     app/GuitarPedals/src/ui.h \
     app/GuitarPedals/src/ui_helpers.h \
     lv_conf.h \
