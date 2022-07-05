@@ -99,6 +99,12 @@ SOURCES += \
     app/GuitarPedals/src/ui_img_pedal_volume_png.c \
     app/GuitarPedals/src/ui_img_right_arrow_png.c \
     app/GuitarPedals/src/ui_img_screen_icon_png.c \
+    app/GuitarPedals/src/ui_img_sel_check_png.c \
+    app/GuitarPedals/src/ui_img_sel_enable_png.c \
+    app/GuitarPedals/src/ui_img_sel_move_left_png.c \
+    app/GuitarPedals/src/ui_img_sel_move_right_png.c \
+    app/GuitarPedals/src/ui_img_sel_props_png.c \
+    app/GuitarPedals/src/ui_img_sel_remove_png.c \
     app/app.c \
     lvgl/src/core/lv_disp.c \
     lvgl/src/core/lv_event.c \
