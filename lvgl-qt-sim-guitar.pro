@@ -100,6 +100,7 @@ SOURCES += \
     app/GuitarPedals/src/ui_img_right_arrow_png.c \
     app/GuitarPedals/src/ui_img_screen_icon_png.c \
     app/GuitarPedals/src/ui_img_sel_check_png.c \
+    app/GuitarPedals/src/ui_img_sel_close_png.c \
     app/GuitarPedals/src/ui_img_sel_enable_png.c \
     app/GuitarPedals/src/ui_img_sel_move_left_png.c \
     app/GuitarPedals/src/ui_img_sel_move_right_png.c \
