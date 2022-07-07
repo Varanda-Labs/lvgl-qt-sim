@@ -67,6 +67,7 @@ SOURCES += \
     ./sim/mainwindow.cpp \
     ./sim/termdlg.cpp \
     app/GuitarPedals/guitar_pedals_main.c \
+    app/GuitarPedals/src/generic_props.c \
     app/GuitarPedals/src/pedal_compressor.c \
     app/GuitarPedals/src/pedal_distortion.c \
     app/GuitarPedals/src/pedal_echo.c \
@@ -274,6 +275,7 @@ HEADERS += \
     ./sim/log.h \
     ./sim/mainwindow.h \
     ./sim/termdlg.h \
+    app/GuitarPedals/src/generic_props_ctl.h \
     app/GuitarPedals/src/pedal.h \
     app/GuitarPedals/src/pedal_compressor.h \
     app/GuitarPedals/src/pedal_distortion.h \
