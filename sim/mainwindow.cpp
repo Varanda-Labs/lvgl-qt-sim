@@ -87,7 +87,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     AudioTest * audio =  new AudioTest(); // 44100Hz 16K bytes -> 0.092879818594104 ms
     audio->Stop();
-    audio->Start();
+    //audio->Start();
 }
 
 void MainWindow::forwardToConsole(char * msg)
