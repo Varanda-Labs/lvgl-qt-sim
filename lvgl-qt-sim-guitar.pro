@@ -1,4 +1,4 @@
-QT       += core gui
+QT       += core gui multimedia
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -267,7 +267,8 @@ SOURCES += \
     lvgl/src/extra/libs/bmp/lv_bmp.c \
     lvgl/src/extra/libs/gif/lv_gif.c \
     lvgl/src/extra/libs/gif/gifdec.c \
-    platform/nat_cmd.c
+    platform/nat_cmd.c \
+    sim/Generator.cpp
 
 HEADERS += \
     ./sim/clabel.h \
@@ -417,7 +418,8 @@ HEADERS += \
     lvgl/src/extra/libs/bmp/lv_bmp.h \
     lvgl/src/extra/libs/lv_libs.h \
     lvgl/src/extra/libs/gif/lv_gif.h \
-    lvgl/src/extra/libs/gif/gifdec.h
+    lvgl/src/extra/libs/gif/gifdec.h \
+    sim/Generator.h
 
 
 
@@ -426,7 +428,10 @@ FORMS += \
     ./sim/mainwindow.ui \
     ./sim/termdlg.ui
 
+#target.path = $$[QT_INSTALL_EXAMPLES]/multimedia/audiooutput
+#INSTALLS += target
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
+else: unix:!android: target.path = /opt/$${TARGET}/bin:$$[QT_INSTALL_EXAMPLES]/multimedia/audiooutput
 !isEmpty(target.path): INSTALLS += target

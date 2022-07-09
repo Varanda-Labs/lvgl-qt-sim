@@ -28,6 +28,7 @@
 #include "nat_cmd.h"
 //#include "lua_eos.h"
 #include "eos_config.h"
+#include "Generator.h"
 
 extern "C" void eos_init(void);
 
@@ -84,6 +85,9 @@ MainWindow::MainWindow(QWidget *parent)
 
     luaInit.start();
 
+    AudioTest * audio =  new AudioTest(); // 44100Hz 16K bytes -> 0.092879818594104 ms
+    audio->Stop();
+    audio->Start();
 }
 
 void MainWindow::forwardToConsole(char * msg)
