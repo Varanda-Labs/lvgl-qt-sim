@@ -109,7 +109,7 @@ void Generator::generateData(const QAudioFormat &format, qint64 durationUs, int 
 qint64 Generator::readData(char *data, qint64 len)
 {
     qint64 total = 0;
-    qDebug("readData len = %d\n", len);
+    //qDebug("readData len = %d\n", len);
     if (!m_buffer.isEmpty()) {
         while (len - total > 0) {
             const qint64 chunk = qMin((m_buffer.size() - m_pos), len - total);
@@ -118,6 +118,7 @@ qint64 Generator::readData(char *data, qint64 len)
             total += chunk;
         }
     }
+    process_audio_frame(data, (int) total);
     return total;
 }
 
@@ -149,45 +150,7 @@ AudioTest::~AudioTest()
 
 void AudioTest::initializeWindow()
 {
-//    QWidget *window = new QWidget;
-//    QVBoxLayout *layout = new QVBoxLayout;
-
-//    m_deviceBox = new QComboBox(this);
-
     const QAudioDeviceInfo &defaultDeviceInfo = QAudioDeviceInfo::defaultOutputDevice();
-
-/*    m_deviceBox->addItem(defaultDeviceInfo.deviceName(), QVariant::fromValue(defaultDeviceInfo));
-    for (auto &deviceInfo: QAudioDeviceInfo::availableDevices(QAudio::AudioOutput)) {
-        if (deviceInfo != defaultDeviceInfo)
-            m_deviceBox->addItem(deviceInfo.deviceName(), QVariant::fromValue(deviceInfo));
-    }
-    connect(m_deviceBox, QOverload<int>::of(&QComboBox::activated), this, &AudioTest::deviceChanged);
-    layout->addWidget(m_deviceBox);
-
-    m_modeButton = new QPushButton(this);
-    connect(m_modeButton, &QPushButton::clicked, this, &AudioTest::toggleMode);
-    layout->addWidget(m_modeButton);
-
-    m_suspendResumeButton = new QPushButton(this);
-    connect(m_suspendResumeButton, &QPushButton::clicked, this, &AudioTest::toggleSuspendResume);
-    layout->addWidget(m_suspendResumeButton);
-
-    QHBoxLayout *volumeBox = new QHBoxLayout;
-    m_volumeLabel = new QLabel;
-    m_volumeLabel->setText(tr("Volume:"));
-    m_volumeSlider = new QSlider(Qt::Horizontal);
-    m_volumeSlider->setMinimum(0);
-    m_volumeSlider->setMaximum(100);
-    m_volumeSlider->setSingleStep(10);
-    connect(m_volumeSlider, &QSlider::valueChanged, this, &AudioTest::volumeChanged);
-    volumeBox->addWidget(m_volumeLabel);
-    volumeBox->addWidget(m_volumeSlider);
-    layout->addLayout(volumeBox);
-
-    window->setLayout(layout);
-
-    setCentralWidget(window);
-    window->show();*/
 }
 
 void AudioTest::initializeAudio(const QAudioDeviceInfo &deviceInfo)
@@ -295,4 +258,29 @@ void AudioTest::Stop()
     m_generator->stop();
 }
 
+static AudioTest * AudioTestInstance = NULL;
+
+AudioTest * AudioTest::CreateAudioTestInstance() {
+    AudioTestInstance = new AudioTest();
+//    AudioTestInstance->Stop();
+    return AudioTestInstance;
+}
+
+extern "C" {
+
+void start_player()
+{
+    AudioTestInstance->Start();
+}
+
+void stop_player()
+{
+    AudioTestInstance->Stop();
+}
+
+//void process_audio_frame(char * buffer, int len)
+//{
+//}
+
+}
 #endif

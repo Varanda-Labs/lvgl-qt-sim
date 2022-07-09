@@ -109,6 +109,7 @@ SOURCES += \
     app/GuitarPedals/src/ui_img_sel_props_png.c \
     app/GuitarPedals/src/ui_img_sel_remove_png.c \
     app/GuitarPedals/src/ui_img_stop_icon_png.c \
+    app/GuitarPedals/src/util.c \
     app/GuitarPedals/src/visual_audio.c \
     app/app.c \
     lvgl/src/core/lv_disp.c \
@@ -288,6 +289,7 @@ HEADERS += \
     app/GuitarPedals/src/pedal_volume.h \
     app/GuitarPedals/src/ui.h \
     app/GuitarPedals/src/ui_helpers.h \
+    app/GuitarPedals/src/util.h \
     lv_conf.h \
     lvgl/lv_conf_template.h \
     lvgl/src/core/lv_disp.h \

@@ -23,6 +23,7 @@
 #include <QTimer>
 #include "termdlg.h"
 #include "eos_init.h"
+#include "Generator.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -55,6 +56,7 @@ private:
   TermDlg * m_term;
   Console * m_term_console;
   LuaInit luaInit;
+  AudioTest * audio;
 
 };
 #endif // MAINWINDOW_H

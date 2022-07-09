@@ -43,6 +43,7 @@ class AudioTest : QObject //public QMainWindow
     Q_OBJECT
 
 public:
+    static AudioTest * CreateAudioTestInstance();
     AudioTest();
     ~AudioTest();
     void Start();
@@ -73,5 +74,13 @@ private slots:
     void deviceChanged(int index);
     void volumeChanged(int);
 };
+
+extern "C" {
+
+void start_player();
+void stop_player();
+extern void process_audio_frame(char * buffer, int len);
+
+}
 
 #endif // GENERATOR_H

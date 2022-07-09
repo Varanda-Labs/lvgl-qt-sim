@@ -85,8 +85,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     luaInit.start();
 
-    AudioTest * audio =  new AudioTest(); // 44100Hz 16K bytes -> 0.092879818594104 ms
-    audio->Stop();
+    audio =  AudioTest::CreateAudioTestInstance(); // 44100Hz 16K bytes -> 0.092879818594104 ms
+    //audio->Stop();
     //audio->Start();
 }
 
