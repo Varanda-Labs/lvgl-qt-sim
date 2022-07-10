@@ -39,6 +39,9 @@ linux: DEFINES += LINUX
 
 INCLUDEPATH += \
   ./app \
+  ./app/GuitarPedals \
+  ./app/GuitarPedals/src \
+  ./app/GuitarPedals/src/logo_images \
   ./sim \
   ./platform \
   ./lvgl \
@@ -68,6 +71,33 @@ SOURCES += \
     ./sim/termdlg.cpp \
     app/GuitarPedals/guitar_pedals_main.c \
     app/GuitarPedals/src/generic_props.c \
+    app/GuitarPedals/src/logo_images/logo_screen.c \
+    app/GuitarPedals/src/logo_images/ui_img_0000_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0001_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0002_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0003_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0004_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0005_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0006_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0007_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0008_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0009_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0010_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0011_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0012_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0013_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0014_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0015_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0016_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0017_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0018_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0019_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0020_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0021_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0022_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0023_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_0024_png.c \
+    app/GuitarPedals/src/logo_images/ui_img_about_png.c \
     app/GuitarPedals/src/pedal_compressor.c \
     app/GuitarPedals/src/pedal_distortion.c \
     app/GuitarPedals/src/pedal_echo.c \
