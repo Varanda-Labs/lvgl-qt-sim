@@ -20,7 +20,7 @@
 //#include "filesys.h"
 #include <stdint.h>
 #include <stdbool.h>
-#include "log.h"
+#include "logger.h"
 
 #ifdef MOS_DESKTOP
   #define MOS_PASS    0

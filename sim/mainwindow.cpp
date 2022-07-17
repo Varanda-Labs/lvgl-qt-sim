@@ -23,7 +23,7 @@
 #include "lv_conf.h"
 #include "lvgl.h"
 #include "lvgl_integr.h"
-#include "log.h"
+#include "logger.h"
 #include "eos_init.h"
 #include "nat_cmd.h"
 //#include "lua_eos.h"

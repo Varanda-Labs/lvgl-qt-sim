@@ -23,6 +23,8 @@ DEFINES += LUA_EMBEDDED
 
 DEFINES += MOS_DESKTOP
 
+DEFINES += SHOW_LOGO
+
 DEFINES += projCOVERAGE_TEST=1
 
 DEFINES += LV_USE_LOG=LV_LOG_LEVEL_WARN
@@ -70,6 +72,7 @@ SOURCES += \
     ./sim/mainwindow.cpp \
     ./sim/termdlg.cpp \
     app/GuitarPedals/guitar_pedals_main.c \
+    app/GuitarPedals/src/about_screen.c \
     app/GuitarPedals/src/generic_props.c \
     app/GuitarPedals/src/logo_images/logo_screen.c \
     app/GuitarPedals/src/logo_images/ui_img_0000_png.c \
@@ -307,7 +310,7 @@ SOURCES += \
 HEADERS += \
     ./sim/clabel.h \
     ./sim/console.h \
-    ./sim/log.h \
+    ./sim/logger.h \
     ./sim/mainwindow.h \
     ./sim/termdlg.h \
     app/GuitarPedals/src/generic_props_ctl.h \

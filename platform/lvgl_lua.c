@@ -15,7 +15,7 @@
  ***************************************************************
  */
 
-#include "log.h"
+#include "logger.h"
 #include "lua_eos.h"
 #include "lvgl.h"
 #include "lauxlib.h"

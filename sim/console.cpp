@@ -50,7 +50,7 @@
 ****************************************************************************/
 
 #include "console.h"
-#include "log.h"
+#include "logger.h"
 #include <QScrollBar>
 #include <QDebug>
 #include <QMenu>

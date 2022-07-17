@@ -24,7 +24,7 @@
 #include <unistd.h>
 #include <QDir>
 #include <string.h>
-#include "log.h"
+#include "logger.h"
 #include "mos.h"
 
 QThread * luaCppInit(void);
@@ -70,7 +70,7 @@ extern "C" {
 //#include "lua.h"
 //#include "lauxlib.h"
 //#include "lualib.h"
-#include "log.h"
+#include "logger.h"
 #include "mos.h"
 #include "lua_eos.h"
 #include "mos_desktop_timer.h"

@@ -27,7 +27,7 @@
 
 #include "lauxlib.h"
 #include "lualib.h"
-#include "log.h"
+#include "logger.h"
 #include "lua_eos.h"
 #include "nat_cmd.h"
 

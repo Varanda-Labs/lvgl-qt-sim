@@ -227,7 +227,7 @@ SOURCES += \
 HEADERS += \
     ./sim/clabel.h \
     ./sim/console.h \
-    ./sim/log.h \
+    ./sim/logger.h \
     ./sim/mainwindow.h \
     ./sim/termdlg.h \
     lv_conf.h \

@@ -16,7 +16,7 @@
  */
 
 #include <QDebug>
-#include "log.h"
+#include "logger.h"
 
 static void qDebugCpp(const char * s) // format,...)
 {

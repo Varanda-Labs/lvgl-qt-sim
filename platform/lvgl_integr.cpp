@@ -19,7 +19,7 @@
 #include "lvgl.h"
 #include "lvgl_integr.h"
 #include "lv_hal_disp.h"
-#include "log.h"
+#include "logger.h"
 
 MainWindow * gMainObj;
 lv_indev_t * global_indev;

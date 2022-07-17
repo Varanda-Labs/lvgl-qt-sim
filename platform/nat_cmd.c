@@ -15,7 +15,7 @@
  ***************************************************************
  */
 
-#include "log.h"
+#include "logger.h"
 #include "nat_cmd.h"
 #include "eos_config.h"
 #include <string.h>
