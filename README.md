@@ -1,6 +1,7 @@
 # lvgl-qt-sim
 A simple LVGL Simulator. Qt Creator IDE makes easier to develop LVGL UI Apps.
 <br>
+Note that your App is portable to any LVGL supported Embedded System. <br>Qt just provides the dev evironment for developing your UI.
 <br>
 ![docs/demo.png](docs/demo.png)
 
